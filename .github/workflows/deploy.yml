@@ -7,30 +7,29 @@ on:
 
 jobs:
   deploy:
+    name: Deploy
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - name: Setup Google Cloud SDK
-      uses: google-github-actions/setup-gcloud@v1
-      with:
-        project_id: ${{ secrets.GCP_PROJECT_ID }}
-        service_account_key: ${{ secrets.GCP_SA_KEY }}
-        export_default_credentials: true
-    
-    - name: Authenticate to Google Cloud
-      uses: google-github-actions/auth@v1
-      with:
-      credentials_json: '${{ secrets.GOOGLE_CREDENTIALS }}'
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v1
+        with:
+          credentials_json: '${{ secrets.GOOGLE_CREDENTIALS }}'
 
+      - name: Set up Google Cloud SDK
+        uses: google-github-actions/setup-gcloud@v1
 
-    - name: Build and Deploy to Cloud Run
-      run: |
-        gcloud builds submit --tag gcr.io/$GCP_PROJECT_ID/employee-churn
-        gcloud run deploy employee-churn \
-          --image gcr.io/$GCP_PROJECT_ID/employee-churn \
-          --region us-central1 \
-          --platform managed \
-          --allow-unauthenticated
+      - name: Build and push Docker image
+        run: |
+          gcloud builds submit --tag gcr.io/employee-churn-59343/employee-churn
+
+      - name: Deploy to Cloud Run
+        run: |
+          gcloud run deploy employee-churn \
+            --image gcr.io/employee-churn-59343/employee-churn \
+            --platform managed \
+            --region us-central1 \
+            --allow-unauthenticated
