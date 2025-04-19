@@ -1,0 +1,18 @@
+steps:
+  - name: 'node:18'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        npm install
+        npm run build
+
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        gsutil -m rm -r gs://churn-dashboard-bucket-saloni/** || true
+        gsutil -m cp -r dist/* gs://churn-dashboard-bucket-saloni
+
+timeout: '900s'
