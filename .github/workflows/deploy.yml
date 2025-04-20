@@ -21,6 +21,12 @@ jobs:
 
       - name: Set up Google Cloud SDK
         uses: google-github-actions/setup-gcloud@v1
+        with:
+          project_id: employee-churn-59343
+          install_components: 'beta'
+
+      - name: Configure Docker for Artifact Registry (Optional for some cases)
+        run: gcloud auth configure-docker
 
       - name: Build and push Docker image
         run: |
