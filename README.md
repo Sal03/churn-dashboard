@@ -1,4 +1,5 @@
 <img width="650" alt="image" src="https://github.com/user-attachments/assets/966c9901-3ef6-4203-b2e9-daf8afd04043" />
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -67,8 +68,8 @@ High employee turnover is costly and disruptive. Understanding **why employees l
 
 ## 🌐 Live Demo
 
-> **Hosted Link**: [[Click Here to View the Dashboard](https://storage.googleapis.com/YOUR_BUCKET_NAME/index.html)  ](https://drive.google.com/drive/folders/1jRS-SqYl0nbDBY_vP076JPU6LUFDO_T_?usp=sharing)
-> *(Replace with your actual public GCP bucket link)*
+> **Hosted Link**: (https://storage.googleapis.com/YOUR_BUCKET_NAME/index.html)  ](https://drive.google.com/drive/folders/1jRS-SqYl0nbDBY_vP076JPU6LUFDO_T_?usp=sharing)
+
 
 ---
 
