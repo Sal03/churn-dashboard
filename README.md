@@ -68,7 +68,7 @@ High employee turnover is costly and disruptive. Understanding **why employees l
 
 ## 🌐 Live Demo
 
-> **Hosted Link**: (https://storage.googleapis.com/YOUR_BUCKET_NAME/index.html)  ](https://drive.google.com/drive/folders/1jRS-SqYl0nbDBY_vP076JPU6LUFDO_T_?usp=sharing)
+> **Hosted Link**: (https://drive.google.com/drive/folders/1jRS-SqYl0nbDBY_vP076JPU6LUFDO_T_?usp=sharing)
 
 
 ---
