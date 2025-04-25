@@ -13,6 +13,7 @@ Currently, two official plugins are available:
 
 If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
 
+
 # 🧠 Employee Churn Analysis Dashboard
 
 ## 🚀 Objective
@@ -22,6 +23,7 @@ This project aims to identify and visualize employee churn patterns using real-w
 - Perform data analysis to derive key insights
 - Build an interactive Looker Studio dashboard
 - Deploy the dashboard through a React-based web application hosted on Google Cloud Platform (GCP)
+- **NEW:** Integrate real-time data streaming with Google Cloud Pub/Sub
 
 ---
 
@@ -36,13 +38,14 @@ High employee turnover is costly and disruptive. Understanding **why employees l
 - **Frontend**: React + Vite
 - **Visualization**: Looker Studio (Google Data Studio)
 - **Cloud Hosting**: Google Cloud Platform (Cloud Storage)
-- **Data Processing**: Google BigQuery (for dataset structuring and transformation)
-- **Deployment Tools**: `gsutil` CLI for uploading static files
-- **Optional Pipeline (for extension)**: GitHub Actions or GCP Cloud Build for CI/CD
+- **Data Processing**: Google BigQuery
+- **Streaming & Messaging**: Google Cloud Pub/Sub
+- **Deployment Tools**: `gsutil` CLI, GitHub Actions (CI/CD optional)
 
 ---
 
 ## 📁 Project Structure
+
 
 
 ---
@@ -68,7 +71,7 @@ High employee turnover is costly and disruptive. Understanding **why employees l
 
 ## 🌐 Live Demo
 
-> **Hosted Link**: (https://drive.google.com/drive/folders/1jRS-SqYl0nbDBY_vP076JPU6LUFDO_T_?usp=sharing)
+> **Demo Video Link**: (https://drive.google.com/drive/folders/1jRS-SqYl0nbDBY_vP076JPU6LUFDO_T_?usp=sharing) , (https://drive.google.com/file/d/1ur34QaxFS6JBMAGakzwqdtWgRxVnyM0z/view?usp=sharing)
 
 
 ---
